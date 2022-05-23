@@ -49,7 +49,7 @@ function generatePassword () {
 };
  // ask user to select the password range
  var passwordLenght= window.prompt( "Please select your password lenght ranges between 8 to 128");
- if(passwordLenght<8 ||passwordLenght>128);{
+ if(passwordLenght <8 || passwordLenght >128) {
 //if password lenght is less than 8 or more than 128, reject the passowrd and prompt user
 window.alert("password lenght must be at least 8 and not more than 128");
 return;
@@ -58,25 +58,25 @@ return;
  }
 var passwordOption = []
 if(isLowercase){
-  passwordOption=passwordOption.concat(lowercase)}
+  passwordOption=passwordOption.concat(lowercase);}
 if(isUppercase){
-  passwordOption.concat(uppercase)}
+  passwordOption=passwordOption.concat(uppercase);}
 if(isNumber){
-  passwordOption=passwordOption.concat(number)}
+  passwordOption=passwordOption.concat(number);}
 if(isSymbol){
-  passwordOption=passwordOption.concat(symbol)}
+  passwordOption=passwordOption.concat(symbol);}
 
   //console.log password option
 
 
 
-//console.log (passwordOption)
+console.log (passwordOption);
 
   //String to store detail of generated password
 var randomPassword = ""
 
 //for loop to create the random password engine
-for(var i =0; i <passwordLemght; i ++){
+for(var i =0; i <passwordLenght; i ++){
   var item = passwordOption[Math.floor(Math.random()*passwordOption.length)]
   randomPassword += item
 }
@@ -89,7 +89,8 @@ return randomPassword;
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function writePassword() 
+{
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
